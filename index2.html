@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Website</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9a825;
+}
+
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#home {
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about, #services, #contact {
+    background-color: white;
+    margin-top: 20px;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f9a825;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e65100;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #f9a825;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e65100;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h1>Welcome to Our Beautiful Website</h1>
+        <p>Your journey to a stunning website begins here.</p>
+        <button onclick="scrollToSection('about')">Learn More</button>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>We create beautiful and functional websites for all kinds of businesses.</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <p>From design to deployment, we cover everything you need.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Beautiful Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    window.scrollTo({
+        top: section.offsetTop - 50,
+        behavior: 'smooth'
+    });
+}
+
+    </script>
+</body>
+</html>
